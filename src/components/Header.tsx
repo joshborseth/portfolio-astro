@@ -1,15 +1,19 @@
 const Header = () => {
   return (
-    <header className="bg-green-500">
+    <header className="text-secondary">
       <nav>
         <ul>
           <li>
             <a href="#">
-              <img src="/bitmoji.png" alt="Joshua Bitmoji" className="border-2 rounded-full" />
+              <img
+                src="/bitmoji.png"
+                alt="Joshua Bitmoji Avatar"
+                className="border-2 rounded-full w-20"
+              />
             </a>
           </li>
           <li>
-            <a href="">Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
             <a href="">About</a>
