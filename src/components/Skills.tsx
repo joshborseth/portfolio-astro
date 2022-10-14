@@ -8,16 +8,16 @@ const Skills = () => {
   return (
     <ul className="flex justify-center items-center gap-10">
       <li>
-        <SkillIcon src={Typescript} alt="Typescript Icon." duration={0.5} />
+        <SkillIcon src={Typescript} alt="Typescript Icon." delay={0.5} />
       </li>
       <li>
-        <SkillIcon src={React} alt="React Icon." duration={1} />
+        <SkillIcon src={React} alt="React Icon." delay={1} />
       </li>
       <li>
-        <SkillIcon duration={1.5} alt="Tailwind Icon." src={Tailwind} />
+        <SkillIcon delay={1.5} alt="Tailwind Icon." src={Tailwind} />
       </li>
       <li>
-        <SkillIcon duration={2} alt="Next Icon." src={Next} />
+        <SkillIcon delay={2} alt="Next Icon." src={Next} />
       </li>
     </ul>
   );
