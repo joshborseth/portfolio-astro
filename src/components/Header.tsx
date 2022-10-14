@@ -9,7 +9,7 @@ const Header = () => {
             className="border-2 border-secondary rounded-full w-16"
           />
         </a>
-        <ul className="flex items-center gap-5">
+        <ul className="flex items-center gap-5 font-bold">
           <li>
             <a href="#">Home</a>
           </li>
