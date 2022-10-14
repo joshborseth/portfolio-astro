@@ -10,7 +10,6 @@ const ParticleBackground = () => {
 
   return (
     <Particles
-      style={{ zIndex: -999 }}
       id="tsparticles"
       init={particlesInit}
       options={{
