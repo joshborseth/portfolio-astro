@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="text-md p-2 fixed top-0 w-screen">
+    <header className="text-md px-2 py-5 fixed top-0 w-screen shadow-secondary shadow-sm z-50 bg-primary">
       <nav className="flex items-center justify-start gap-5">
         <a href="#">
           <img
@@ -14,10 +14,10 @@ const Header = () => {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#">About</a>
           </li>
           <li>
-            <a href="">Projects</a>
+            <a href="#">Projects</a>
           </li>
         </ul>
       </nav>

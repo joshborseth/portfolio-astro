@@ -3,11 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
 import SocialMediaFooter from "../components/SocialMediaFooter";
 import Skills from "../components/Skills";
+import ParticleBackground from "../components/ParticleBackground";
 ---
 
 <Layout>
   <Header />
-  <main class="w-3/4 mx-auto h-screen flex flex-col justify-center items-center gap-5 text-center">
+  <main
+    class="w-3/4 mx-auto h-screen flex flex-col justify-center items-center gap-5 text-center z-50"
+  >
     <h1 class="text-3xl lg:text-5xl font-bold">Joshua Borseth</h1>
     <h2 class="text-xl lg:3xl font-light">Web Developer</h2>
     <img
@@ -21,4 +24,5 @@ import Skills from "../components/Skills";
     <Skills client:load />
   </main>
   <SocialMediaFooter client:load />
+  <ParticleBackground client:load />
 </Layout>
