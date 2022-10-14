@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
 import SocialMediaFooter from "../components/SocialMediaFooter";
+import Skills from "../components/Skills";
 ---
 
 <Layout>
@@ -17,6 +18,7 @@ import SocialMediaFooter from "../components/SocialMediaFooter";
     <p class="text-center text-xl font-light">
       A passion for building user oriented, scalable, type safe applications.
     </p>
+    <Skills client:load />
   </main>
-  <SocialMediaFooter />
+  <SocialMediaFooter client:load />
 </Layout>
