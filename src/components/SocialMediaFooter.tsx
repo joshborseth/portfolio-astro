@@ -5,19 +5,27 @@ import LinkedIn from "/linkedin.svg";
 
 const SocialMediaFooter = () => {
   return (
-    <footer className="bg-accent fixed bottom-0 w-screen">
-      <ul className="flex justify-center items-center">
+    <footer className="fixed bottom-0 h-24 w-full lg:w-1/2 transform -translate-x-1/2 left-1/2 bg-accent rounded-2xl">
+      <ul className="flex justify-around items-center h-full">
         <li>
-          <img src={LinkedIn} alt="LinkedIn Icon" />
+          <a href="#">
+            <img src={LinkedIn} alt="LinkedIn Icon" />
+          </a>
         </li>
         <li>
-          <img src={Github} alt="Github Icon" />
+          <a href="#">
+            <img src={Github} alt="Github Icon" />
+          </a>
         </li>
         <li>
-          <img src={Twitter} alt="Twitter Icon" />
+          <a href="#">
+            <img src={Twitter} alt="Twitter Icon" />
+          </a>
         </li>
         <li>
-          <img src={Email} alt="Email Icon" />
+          <a href="#">
+            <img src={Email} alt="Email Icon" />
+          </a>
         </li>
       </ul>
     </footer>
