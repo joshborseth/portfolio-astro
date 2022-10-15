@@ -2,7 +2,7 @@ import Email from "/email.svg";
 import Twitter from "/twitter.svg";
 import Github from "/github.svg";
 import LinkedIn from "/linkedin.svg";
-import SocialLink from "../components/SocialLink";
+import SocialLink from "../footer/SocialLink";
 const SocialMediaFooter = () => {
   return (
     <footer className="fixed z-50 bottom-0 h-24 w-full lg:w-1/2 transform -translate-x-1/2 left-1/2 bg-accent rounded-2xl">
