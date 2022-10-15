@@ -6,7 +6,7 @@ import Next from "/nextjs.svg";
 
 const Skills = () => {
   return (
-    <ul className="flex justify-center items-center gap-10">
+    <ul className="flex justify-center items-center gap-5">
       <li>
         <SkillIcon src={Typescript} alt="Typescript Icon." delay={0.25} />
       </li>
