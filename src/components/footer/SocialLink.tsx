@@ -15,6 +15,7 @@ const SocialLink = (props: Props) => {
           y: -10,
           transition: { duration: 0.1 },
         }}
+        whileTap={{ scale: 0.9 }}
         className="shadow-2xl"
       />
     </a>

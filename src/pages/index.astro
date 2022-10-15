@@ -3,22 +3,40 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
 import SocialMediaFooter from "../components/footer/SocialMediaFooter";
 import Skills from "../components/skills/Skills";
+import Tech from "../components/Tech";
 ---
 
 <Layout>
   <Header />
-  <main class="w-3/4 mx-auto h-screen flex flex-col justify-center items-center gap-5 text-center">
-    <h1 class="text-3xl lg:text-5xl font-bold">Joshua Borseth</h1>
-    <h2 class="text-xl lg:3xl font-light">Web Developer</h2>
-    <img
-      src="/bitmoji.png"
-      alt="Joshua Bitmoji Avatar"
-      class="rounded-full border-2 border-secondary w-40"
-    />
-    <p class="text-center text-lg lg:text-xl font-light">
-      A passion for building user oriented, scalable, type safe applications.
-    </p>
-    <Skills client:load />
+  <main class="text-center w-3/4 mx-auto">
+    <section class="h-screen">
+      <h1 class="text-3xl lg:text-5xl font-bold">Joshua Borseth</h1>
+      <h2 class="text-xl lg:text-2xl font-light">Web Developer</h2>
+      <img
+        src="/bitmoji.png"
+        alt="Joshua Bitmoji Avatar"
+        class="rounded-full border-2 border-secondary w-40"
+      />
+      <p class="text-center text-lg lg:text-xl font-light">
+        A passion for building user oriented, scalable, type safe applications.
+      </p>
+      <Skills client:load />
+    </section>
+    <section class="w-full lg:w-1/2 mx-auto py-40">
+      <h2 class="text-3xl lg:text-5xl font-bold py-5">An Opinionated Developer</h2>
+      <p class="text-lg lg:text-xl font-light">
+        I fell in love with code from the moment I started <span class="text-good font-normal"
+          >Web Development</span
+        >. However, I find myself <span class="text-bad font-normal">frustrated</span> with a few of
+        the technologies that are around today.
+      </p>
+      <Tech client:load />
+    </section>
   </main>
   <SocialMediaFooter client:load />
 </Layout>
+<style>
+  section {
+    @apply flex flex-col justify-center items-center gap-5;
+  }
+</style>
