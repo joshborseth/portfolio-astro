@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="text-md px-2 py-5 fixed top-0 w-screen shadow-secondary shadow-sm z-50 bg-primary">
+    <header className="text-md px-2 py-5 fixed top-0 w-screen">
       <nav className="flex items-center justify-start gap-5">
         <a href="#">
           <img
