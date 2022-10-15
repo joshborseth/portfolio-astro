@@ -3,7 +3,7 @@ import Javascript from "/javascript.svg";
 import Wordpress from "/wordpress.svg";
 import Thumb from "/thumb.svg";
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 const Tech = () => {
   return (
     <div className="w-screen flex flex-col lg:flex-row justify-between items-center text-4xl font-black">
