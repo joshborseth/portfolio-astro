@@ -1,31 +1,25 @@
-import Typescript from "/typescript.svg";
-import Javascript from "/javascript.svg";
-import Wordpress from "/wordpress.svg";
+import Trpc from "/trpc.svg";
+import Astro from "/astro.svg";
+import ReactNative from "/react-native.svg";
 import Thumb from "/thumb.svg";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 const Tech = () => {
   return (
     <div className="w-screen flex flex-col lg:flex-row justify-between items-center text-4xl font-black">
+      <TechItem techIcon={Trpc} techAltText="tRPC Icon." title="tRPC" thumbStyles="bg-good" />
       <TechItem
-        techIcon={Typescript}
-        techIconStyles="bg-secondary"
-        techAltText="Typescript Icon."
+        techIcon={Astro}
+        techIconStyles="bg-secondary p-2"
+        techAltText="Astro Icon."
         thumbStyles="bg-good"
-        rotate={0}
+        title="Astro"
       />
       <TechItem
-        techIcon={Javascript}
-        techAltText="Javascript Icon."
-        thumbStyles="bg-warning"
-        rotate={90}
-      />
-      <TechItem
-        techIcon={Wordpress}
-        techAltText="Wordpress Icon."
-        thumbStyles="bg-bad"
-        techIconStyles="scale-150"
-        rotate={180}
+        techIcon={ReactNative}
+        title="React Native"
+        techAltText="React Native Icon."
+        thumbStyles="bg-good"
       />
     </div>
   );
@@ -35,32 +29,35 @@ type TechItemProps = {
   techAltText: string;
   thumbStyles: string;
   techIconStyles?: string;
-  rotate: number;
+  title: string;
 };
 const TechItem = (props: TechItemProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(divRef);
   return (
-    <motion.div
-      ref={divRef}
-      animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.5 }}
-      transition={{ duration: 0.5 }}
-      className="flex justify-center items-center lg:m-20 m-2 gap-5"
-    >
-      <img
-        className={`${props.techIconStyles} rounded-lg`}
-        src={props.techIcon}
-        alt={props.techAltText}
-      />
-      <span>===</span>
-      <motion.img
-        className={`p-2 rounded-full ${props.thumbStyles}`}
-        src={Thumb}
-        alt="Thumb Icon."
-        animate={{ rotate: isInView ? props.rotate : 0 }}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      />
-    </motion.div>
+    <article className="m-5 lg:m-14">
+      <h3 className="font-bold">{props.title}</h3>
+      <motion.div
+        ref={divRef}
+        animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.5 }}
+        transition={{ duration: 0.5 }}
+        className="flex justify-center items-center gap-5 m-5 lg:m-10"
+      >
+        <img
+          className={`${props.techIconStyles} rounded-lg`}
+          src={props.techIcon}
+          alt={props.techAltText}
+        />
+        <span>===</span>
+        <motion.img
+          className={`p-2 rounded-full ${props.thumbStyles}`}
+          src={Thumb}
+          alt="Thumb Icon."
+          animate={{ rotate: isInView ? 360 : 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        />
+      </motion.div>
+    </article>
   );
 };
 export default Tech;
