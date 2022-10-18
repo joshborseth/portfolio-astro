@@ -1,0 +1,22 @@
+---
+import Header from "../components/Header";
+import SocialMediaFooter from "../components/SocialMediaFooter";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <Header />
+  <main>
+    <h1 class="mt-32 mb-20 text-center">About</h1>
+    <section class="text-center">
+      <h2>Joshua Borseth</h2>
+      <ul>
+        <li>React Lover</li>
+        <li>Typescript Enthusiast</li>
+        <li>Tailwind Fan Boy</li>
+        <li>Vercel Fanatic</li>
+      </ul>
+    </section>
+  </main>
+  <SocialMediaFooter client:load />
+</Layout>

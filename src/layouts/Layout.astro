@@ -13,10 +13,16 @@
   </head>
   <body class="bg-primary text-secondary">
     <slot />
-    <style>
+    <style is:global>
       @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;700;900&display=swap");
       html {
         font-family: "M PLUS Rounded 1c", sans-serif;
+      }
+      h1 {
+        @apply text-3xl lg:text-5xl font-bold;
+      }
+      button {
+        @apply bg-secondary text-primary font-bold py-2 px-4 rounded;
       }
     </style>
   </body>
