@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 const Tech = () => {
   return (
-    <div className="w-screen flex flex-col lg:flex-row justify-between items-center text-4xl font-black">
+    <div className="flex flex-col lg:flex-row justify-between items-center text-2xl w-[90vw] font-black">
       <TechItem techIcon={Trpc} techAltText="tRPC Icon." title="tRPC" thumbStyles="bg-good" />
       <TechItem
         techIcon={Astro}
@@ -35,13 +35,13 @@ const TechItem = (props: TechItemProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(divRef);
   return (
-    <article className="m-5 lg:m-14">
+    <article className="p-5 lg:p-10">
       <h3 className="font-bold">{props.title}</h3>
       <motion.div
         ref={divRef}
         animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.5 }}
         transition={{ duration: 0.5 }}
-        className="flex justify-center items-center gap-5 m-5 lg:m-10"
+        className="flex justify-center items-center gap-5 p-5 lg:p-10"
       >
         <img
           className={`${props.techIconStyles} rounded-lg`}
