@@ -1,0 +1,51 @@
+---
+import Header from "../../components/Header";
+import SocialMediaFooter from "../../components/SocialMediaFooter";
+import Layout from "../../layouts/Layout.astro";
+import { data } from "../../projectData";
+
+export async function getStaticPaths() {
+  return data.map(
+    ({
+      slug,
+      title,
+      projectPic,
+      projectPicAlt,
+      codePic,
+      codePicAlt,
+      liveLink,
+      githubLink,
+      description,
+      learned,
+      tech,
+    }) => {
+      return {
+        params: { slug },
+        props: {
+          title,
+          projectPic,
+          projectPicAlt,
+          codePic,
+          codePicAlt,
+          liveLink,
+          githubLink,
+          description,
+          learned,
+          tech,
+        },
+      };
+    }
+  );
+}
+
+const { slug } = Astro.params;
+const props = Astro.props;
+---
+
+<Layout>
+  <Header />
+  <main>
+    <h1 class="mt-32 mb-20 text-center">{JSON.stringify(props)}</h1>
+  </main>
+  <SocialMediaFooter client:load />
+</Layout>
