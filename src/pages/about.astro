@@ -6,36 +6,37 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <Header />
-  <main class="w-1/2 mx-auto">
-    <h1 class="mt-32 mb-20 text-center">About</h1>
-    <section class="grid grid-cols-2 border-b-2 p-10 bg-secondary text-primary rounded-xl">
+  <main class="h-screen overflow-hidden">
+    <h1 class="mt-32 text-center">About</h1>
+    <section class="px-20 mx-auto w-full flex justify-center items-center">
       <div>
-        <h2 class="text-2xl lg:text-4xl font-extrabold py-5">Joshua Borseth</h2>
-        <ul class="text-xl list-disc font-bold ml-5">
-          <li>React Lover</li>
-          <li>Typescript Enthusiast</li>
-          <li>Tailwind Fan Boy</li>
-          <li>Vercel Fanatic</li>
-        </ul>
+        <h2>How I Found Web Dev</h2>
+        <p>
+          After a year of the Computer Information Systems Program at UFV, I knew I had found my
+          passion. Web Development. It started out as just a hobby as UFV taught me a lot more about
+          hardware than they did software. During this year I focused a lot of my attention on my
+          foundational programming skills by myself. This is why I consider myself to be a Self
+          Taught Web Developer.
+        </p>
+        <h2>Learning by Building</h2>
+        <p>
+          I would identify myself as a Self Taught Developer. However, I have found that learning
+          through tutorials is not a productive way to grow as a developer. Instead, I have spent a
+          lot of time improving on my ability to effectively read documentation to solve problems
+          when I run into them. I firmly believe that in order to grow in this industry, you need to
+          jump right into the action and start building.
+        </p>
       </div>
-      <div class="flex justify-evenly items-center rounded p-2">
-        <img
-          src="/bitmoji.png"
-          alt="Bitmoji avatar icon."
-          class="border-4 border-primary rounded-full"
-        />
-      </div>
-    </section>
-    <section>
-      <h2>How I Found Web Dev</h2>
-      <p>
-        After a year of the Computer Information Systems Program at UFV, I knew I had found my
-        passion. Web Development. It started out as just a hobby as UFV taught me a lot more about
-        hardware than they did software. During this year I focused a lot of my attention on my
-        foundational programming skills by myself. This is why I consider myself to be a Self Taught
-        Web Developer.
-      </p>
+      <img src="bitmoji-full.webp" alt="Large Bitmoji Avatar." class="w-1/4" />
     </section>
   </main>
   <SocialMediaFooter client:load />
 </Layout>
+<style>
+  h2 {
+    @apply text-2xl lg:text-3xl font-bold py-5;
+  }
+  p {
+    @apply text-lg font-light;
+  }
+</style>
