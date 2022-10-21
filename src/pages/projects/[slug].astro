@@ -48,39 +48,45 @@ const props = Astro.props;
   <main class="px-20">
     <h1 class="mt-32 text-center">{props.title}</h1>
     <h2 class="text-center mt-5 text-xl mb-10">{props.date.toLocaleDateString()}</h2>
-    <section class="flex justify-between items-center gap-5">
-      <div class="w-3/4">
+    <section class="flex justify-between items-center gap-10">
+      <div class="w-1/2">
         <img class="rounded border-4" src={props.projectPic} alt={props.projectPicAlt} />
         <div class="flex justify-center items-center w-full">
           <a href={props.liveLink} class="block flex-1">Live</a>
           <a class="bg-accent text-secondary block flex-1" href={props.githubLink}>Github</a>
         </div>
       </div>
-      <div>
+      <div class="w-1/2">
         <h2 class="pb-5">Description</h2>
         <p>{props.description}</p>
       </div>
     </section>
+    <section class="flex justify-between items-center gap-10">
+      <img class="w-1/3 rounded border-4" src={props.codePic} alt={props.codePicAlt} />
+      <div>
+        <h2 class="pb-5">What I learned</h2>
+        <p>{props.learned}</p>
+        <div class="flex justify-start gap-10 items-center w-1/2">
+          <a href={props.liveLink} class="m-0 block flex-1 my-5">Live</a>
+          <a class="bg-accent text-secondary m-0 block flex-1 my-5" href={props.githubLink}
+            >Github</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="w-3/4 mx-auto pb-40">
+      <h2 class="text-center py-10">Notable Skills</h2>
+      <ul class="flex justify-center items-center gap-20">
+        {
+          props.tech.map((skill: any) => (
+            <li>
+              <img class="rounded-lg bg-secondary w-20" src={skill.src} alt={skill.alt} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </main>
-  <section class="flex justify-between items-center gap-5">
-    <img class="w-3/4 rounded border-4" src={props.codePic} alt={props.codePicAlt} />
-    <div>
-      <h2 class="pb-5">What I learned</h2>
-      <p>{props.learned}</p>
-    </div>
-  </section>
-  <section class="w-3/4 mx-auto pb-40">
-    <h2 class="text-center py-10">Notable Skills</h2>
-    <ul class="flex justify-center items-center gap-20">
-      {
-        props.tech.map((skill: any) => (
-          <li>
-            <img class="rounded-lg bg-secondary w-20" src={skill.src} alt={skill.alt} />
-          </li>
-        ))
-      }
-    </ul>
-  </section>
   <SocialMediaFooter client:load />
 </Layout>
 <style>

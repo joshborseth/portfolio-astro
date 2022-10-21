@@ -23,13 +23,12 @@ export const data: projectDataType[] = [
     date: new Date("2022-08-19"),
     projectPic: "../movie-db.jpg",
     projectPicAlt: "Movie Database Screenshot.",
-    codePic: "../movie-db-code.jpg",
+    codePic: "../movie-db-code.png",
     codePicAlt: "Movie Database Code Screenshot.",
     liveLink: "#",
     githubLink: "#",
     description:
-      "Movie Database created using the TMDB API and the T3 Stack. A stack that allows for end-to-end fullstack typesafety.",
-    learned:
+    "Movie Database created using the TMDB API and the T3 Stack. A stack that allows for end-to-end full stack type safety. The Movie Database displays Upcoming, Now Playing, Popular, and Top Rated Movies by fetching data from the TMDB API. The database portion of the application saves the users' favourites. This is so a user can refer back to their curated list at a later time.",    learned:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio maxime tempore voluptas, repellat vel facilis nemo suscipit minima explicabo voluptatum non itaque modi velit? Possimus ut quidem aut autem quaerat, esse placeat dolorum pariatur repellat in? Quaerat autem, assumenda quidem, voluptates alias voluptatibus nesciunt est sapiente facilis laborum amet rem dignissimos ipsam recusandae, voluptatum qui quae ullam laudantium saepe architecto. Excepturi distinctio similique blanditiis esse quisquam recusandae, ab asperiores velit earum eos qui fugiat expedita aut iure quo, provident nam? Labore, deleniti amet? Alias amet mollitia reiciendis distinctio eveniet culpa praesentium, odio commodi fugit dicta iste vitae voluptatum, voluptas enim.",
     tech: [
       { src: "../nextjs.svg", alt: "Next.js Icon." },
