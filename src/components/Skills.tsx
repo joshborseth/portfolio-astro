@@ -14,10 +14,10 @@ const Skills = () => {
         <SkillIcon src={React} alt="React Icon." delay={0.5} />
       </li>
       <li>
-        <SkillIcon delay={0.75} alt="Tailwind Icon." src={Tailwind} />
+        <SkillIcon src={Tailwind} alt="Tailwind Icon." delay={0.75} />
       </li>
       <li>
-        <SkillIcon delay={1} alt="Next Icon." src={Next} />
+        <SkillIcon src={Next} alt="Next Icon." delay={1} />
       </li>
     </ul>
   );

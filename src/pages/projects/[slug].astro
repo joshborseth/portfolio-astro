@@ -9,6 +9,7 @@ export async function getStaticPaths() {
     ({
       slug,
       title,
+      date,
       projectPic,
       projectPicAlt,
       codePic,
@@ -23,6 +24,7 @@ export async function getStaticPaths() {
         params: { slug },
         props: {
           title,
+          date,
           projectPic,
           projectPicAlt,
           codePic,
@@ -38,14 +40,60 @@ export async function getStaticPaths() {
   );
 }
 
-const { slug } = Astro.params;
 const props = Astro.props;
 ---
 
 <Layout>
   <Header />
-  <main>
-    <h1 class="mt-32 mb-20 text-center">{JSON.stringify(props)}1</h1>
+  <main class="px-20">
+    <h1 class="mt-32 text-center">{props.title}</h1>
+    <h2 class="text-center mt-5 text-xl mb-10">{props.date.toLocaleDateString()}</h2>
+    <section class="flex justify-between items-center gap-5">
+      <div class="w-3/4">
+        <img class="rounded border-4" src={props.projectPic} alt={props.projectPicAlt} />
+        <div class="flex justify-center items-center w-full">
+          <a href={props.liveLink} class="block flex-1">Live</a>
+          <a class="bg-accent text-secondary block flex-1" href={props.githubLink}>Github</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="pb-5">Description</h2>
+        <p>{props.description}</p>
+      </div>
+    </section>
   </main>
+  <section class="flex justify-between items-center gap-5">
+    <img class="w-3/4 rounded border-4" src={props.codePic} alt={props.codePicAlt} />
+    <div>
+      <h2 class="pb-5">What I learned</h2>
+      <p>{props.learned}</p>
+    </div>
+  </section>
+  <section class="w-3/4 mx-auto pb-40">
+    <h2 class="text-center py-10">Notable Skills</h2>
+    <ul class="flex justify-center items-center gap-20">
+      {
+        props.tech.map((skill: any) => (
+          <li>
+            <img class="rounded-lg bg-secondary w-20" src={skill.src} alt={skill.alt} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
   <SocialMediaFooter client:load />
 </Layout>
+<style>
+  section {
+    @apply py-10;
+  }
+  a {
+    @apply bg-secondary text-primary font-bold py-2 px-4 rounded m-5 text-center;
+  }
+  h2 {
+    @apply text-2xl lg:text-4xl font-normal;
+  }
+  p {
+    @apply font-light;
+  }
+</style>
