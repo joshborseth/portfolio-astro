@@ -6,19 +6,23 @@ import { motion } from "framer-motion";
 
 const SocialMediaFooter = () => {
   return (
-    <footer className="fixed z-50 bottom-0 h-24 w-full lg:w-1/2 transform -translate-x-1/2 left-1/2 bg-accent rounded-2xl">
-      <ul className="flex justify-around items-center h-full">
+    <footer className="fixed bottom-0 left-1/2 z-50 h-24 w-full -translate-x-1/2 transform rounded-2xl bg-accent lg:w-1/2">
+      <ul className="flex h-full items-center justify-around">
         <li>
-          <SocialLink src={LinkedIn} alt="LinkedIn Icon" />
+          <SocialLink
+            href="https://www.linkedin.com/in/joshua-borseth-427650226/"
+            src={LinkedIn}
+            alt="LinkedIn Icon"
+          />
         </li>
         <li>
-          <SocialLink src={Twitter} alt="Twitter Icon" />
+          <SocialLink href="https://twitter.com/JoshBorseth" src={Twitter} alt="Twitter Icon" />
         </li>
         <li>
-          <SocialLink src={Github} alt="Github Icon" />
+          <SocialLink href="https://github.com/joshborseth" src={Github} alt="Github Icon" />
         </li>
         <li>
-          <SocialLink src={Email} alt="Email Icon" />
+          <SocialLink href="mailto:joshuaborseth@gmail.com" src={Email} alt="Email Icon" />
         </li>
       </ul>
     </footer>
@@ -30,10 +34,11 @@ export default SocialMediaFooter;
 type Props = {
   src: string;
   alt: string;
+  href: string;
 };
 const SocialLink = (props: Props) => {
   return (
-    <a href="#">
+    <a href={props.href}>
       <motion.img
         src={props.src}
         alt={props.alt}

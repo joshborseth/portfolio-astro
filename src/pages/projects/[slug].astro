@@ -62,7 +62,6 @@ const props = Astro.props;
       </div>
     </section>
     <section class="flex justify-between items-center gap-10">
-      <img class="w-1/3 rounded border-4" src={props.codePic} alt={props.codePicAlt} />
       <div>
         <h2 class="pb-5">What I learned</h2>
         <p>{props.learned}</p>
@@ -73,6 +72,7 @@ const props = Astro.props;
           >
         </div>
       </div>
+      <img class="w-1/3 rounded border-4" src={props.codePic} alt={props.codePicAlt} />
     </section>
     <section class="w-3/4 mx-auto pb-40">
       <h2 class="text-center py-10">Notable Skills</h2>
