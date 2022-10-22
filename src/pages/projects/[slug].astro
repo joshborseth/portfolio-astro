@@ -80,7 +80,11 @@ const props = Astro.props;
         {
           props.tech.map((skill: any) => (
             <li>
-              <img class="rounded-lg bg-secondary w-20" src={skill.src} alt={skill.alt} />
+              <img
+                class={skill.styleOverride ? skill.styleOverride : "rounded-lg bg-secondary w-20"}
+                src={skill.src}
+                alt={skill.alt}
+              />
             </li>
           ))
         }
