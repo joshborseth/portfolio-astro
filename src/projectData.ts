@@ -46,7 +46,7 @@ export const data: projectDataType[] = [
     projectPicAlt: "Chess Game Screenshot.",
     codePic: "../chess-code.png",
     codePicAlt: "Chess Game Code Screenshot.",
-    liveLink: "https://jbmovies.joshborseth.com/",
+    liveLink: "https://chess.joshborseth.com/",
     githubLink: "https://github.com/joshborseth/chess",
     description:
       "Chess game created using vanilla javascript. The game is fully playable with two players, and uses no external libraries. This project was all about getting better at Javascript specifically. I really felt like this project alone helped me go from a beginner in Javascript, to being much more comfortable with the language.",
