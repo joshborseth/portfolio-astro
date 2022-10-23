@@ -74,7 +74,11 @@ export const data: projectDataType[] = [
     learned:
       "The main thing I learned while creating this website was Astro itself. It was interesting to try out a new techonology, and I had a blast doing so. I found that the dynamic routes were very interesting as the docs showed how to create dynamic routes using markdown files. I used a different method by just writing JSON and that seemed to work just fine. I wonder if there are downsides to this method? I've been thinking about refactoring this project to use markdown files instead of JSON since that is what the docs recommend.",
     tech: [
-      { src: "../astro.svg", alt: "Astro Icon.", styleOverride: "p-2 bg-secondary w-20 rounded" },
+      {
+        src: "../astro.svg",
+        alt: "Astro Icon.",
+        styleOverride: "p-2 bg-secondary w-20 scale-[.8] lg:scale-100 rounded",
+      },
       { src: "../typescript.svg", alt: "Typescript Icon." },
       { src: "../tailwind.svg", alt: "Tailwind Icon." },
     ],
