@@ -39,7 +39,7 @@ const TechItem = (props: TechItemProps) => {
       <h3 className="font-bold">{props.title}</h3>
       <motion.div
         ref={divRef}
-        animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.5 }}
+        animate={{ opacity: isInView ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         className="flex justify-center items-center gap-5 p-5 lg:p-10"
       >
@@ -47,14 +47,6 @@ const TechItem = (props: TechItemProps) => {
           className={`${props.techIconStyles} rounded-lg`}
           src={props.techIcon}
           alt={props.techAltText}
-        />
-        <span>===</span>
-        <motion.img
-          className={`p-2 rounded-full ${props.thumbStyles}`}
-          src={Thumb}
-          alt="Thumb Icon."
-          animate={{ rotate: isInView ? 360 : 0 }}
-          transition={{ duration: 0.5, delay: 0.25 }}
         />
       </motion.div>
     </article>

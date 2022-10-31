@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const SocialMediaFooter = () => {
   return (
-    <footer className="fixed bottom-0 left-1/2 z-50 h-24 w-full -translate-x-1/2 transform rounded-2xl bg-accent lg:w-1/2">
+    <footer className="fixed bottom-0 left-1/2 z-50 h-20 w-full -translate-x-1/2 transform rounded-2xl bg-accent lg:w-1/2">
       <ul className="flex h-full items-center justify-around">
         <li>
           <SocialLink
